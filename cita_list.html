@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica Primera Evaluación</title>
+    <script src="vendor/jquery.js"></script>
+    <script src="controllers/cita_form.js"></script>
+    <script src="controllers/cita_list.js"></script>
+</head>
+<body>
+<h1>CITAS</h1>
+<div id="filtroBusqueda">
+    <fieldset>
+        <legend>Filtro de busqueda</legend>
+        <label for="id">ID: </label>
+        <input type="text" name="id" id="idFiltroCita">
+
+        <label for="fecha">Fecha: </label>
+        <input type="datetime-local" name="dni" id="fechaFiltroCita">
+
+        <label for="medico_id">Medico ID: </label>
+        <input type="text" name="medico_id" id="medico_idFiltroCita">
+
+        <label for="enfermero_id">Enfermero ID: </label>
+        <input type="text" name="enfermero_id" id="enfermero_idFiltroCita">
+
+        <label for="paciente_id">Paciente ID:</label>
+        <input type="text" name="paciente_id" id="paciente_idFiltroCita">
+
+        <input type="button" id="enviar" value="Enviar">
+
+        <input type="button" id="insertarBoton" value="Insertar">
+
+        <input type="button" id="limpiar" value="Limpiar">
+    </fieldset>
+</div>
+
+<table border="1px">
+    <thead>
+    <tr>
+        <th id="id">ID</th>
+        <th id="fecha">Fecha</th>
+        <th id="medico_id">Medico ID</th>
+        <th id="enfermero_id">Enfermero ID</th>
+        <th id="paciente_id">Paciente ID</th>
+        <th id="editar">Editar</th>
+        <th id="eliminar">Eliminar</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div>
+    <input type="button" id="principio" value="<<">
+    <input type="button" id="atras" value="<">
+    <input type="text" id="pagina" value="1">
+    <input type="button" id="siguiente" value=">">
+    <input type="button" id="final" value=">>">
+    <select name="numeros_personas" id="numeros_personas">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+    </select>
+</div>
+<div>
+    <input type="button" id="medicos" value="Medicos">
+    <input type="button" id="pacientes" value="Pacientes">
+    <input type="button" id="citas" value="Citas">
+</div>
+<div>
+    <label>Paginas Totales: </label>
+    <label id="paginas_totales"></label>
+    <label>Registros Totales: </label>
+    <label id="registros_totales"></label>
+</div>
+</body>
+</html>

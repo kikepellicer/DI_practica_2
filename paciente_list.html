@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica Primera Evaluación</title>
+    <script src="vendor/jquery.js"></script>
+    <script src="controllers/paciente_form.js"></script>
+    <script src="controllers/paciente_list.js"></script>
+</head>
+<body>
+<h1>PACIENTE</h1>
+<div id="filtroBusqueda">
+    <fieldset>
+        <legend>Filtro de busqueda</legend>
+        <label for="id">ID: </label>
+        <input type="text" name="idFiltroPaciente" id="idFiltroPaciente">
+
+        <label for="sip">SIP: </label>
+        <input type="text" name="sip" id="sipFiltroPaciente">
+
+        <label for="dni">DNI: </label>
+        <input type="text" name="dni" id="dniFiltroPaciente">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombreFiltroPaciente">
+
+        <label for="apellido1">Primer Apellido: </label>
+        <input type="text" name="apellido1" id="apellido1FiltroPaciente">
+
+        <label for="apellido2">Segundo Apellido: </label>
+        <input type="text" name="apellido2" id="apellido2FiltroPaciente">
+
+        <label for="telefono">Telefono: </label>
+        <input type="text" name="telefono" id="telefonoFiltroPaciente">
+
+        <label for="sexo">Sexo: </label>
+        <input type="text" name="sexo" id="sexoFiltroPaciente">
+
+        <label for="fecha">Fecha: </label>
+        <input type="date" name="fecha" id="fechaFiltroPaciente">
+
+        <label for="localidad">Localidad: </label>
+        <input type="text" name="localidad" id="localidadFiltroPaciente">
+
+        <label for="calle">Calle: </label>
+        <input type="text" name="calle" id="calleFiltroPaciente">
+
+        <label for="numero">Numero De Calle:</label>
+        <input type="text" name="numero" id="numeroFiltroPaciente">
+
+        <label for="puerta">Puerta:</label>
+        <input type="text" name="puerta" id="puertaFiltroPaciente">
+
+        <label for="piso">Piso:</label>
+        <input type="text" name="piso" id="pisoFiltroPaciente">
+
+        <input type="button" id="enviarPaciente" value="Enviar">
+
+        <input type="button" id="insertarBotonPaciente" value="Insertar">
+
+        <input type="button" id="limpiarPaciente" value="Limpiar">
+    </fieldset>
+</div>
+<table border="1px">
+    <thead>
+    <tr>
+        <th id="id">ID</th>
+        <th id="sip">SIP</th>
+        <th id="dni">DNI</th>
+        <th id="nombre">Nombre</th>
+        <th id="apellido1">Primer apellido</th>
+        <th id="apellido2">Segundo apellido</th>
+        <th id="telefono">Telefono</th>
+        <th id="sexo">Sexo</th>
+        <th id="fecha">Fecha</th>
+        <th id="localidad">Localidad</th>
+        <th id="calle">Calle</th>
+        <th id="numero">Numero</th>
+        <th id="puerta">Puerta</th>
+        <th id="piso">Piso</th>
+        <th id="Editar">Editar</th>
+        <th id="Borrar">Borrar</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="paginador">
+    <input type="button" id="principio" value="<<">
+    <input type="button" id="atras" value="<">
+    <input type="text" id="pagina" value="1">
+    <input type="button" id="siguiente" value=">">
+    <input type="button" id="final" value=">>">
+    <select name="numeros_personas" id="numeros_personas">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+    </select>
+    <label>Paginas Totales: </label>
+    <label id="paginas_totales"></label>
+    <label>Registros Totales: </label>
+    <label id="registros_totales"></label>
+</div>
+<div id="menu">
+    <input type="button" id="medicos" value="Medicos">
+    <input type="button" id="pacientes" value="Pacientes">
+    <input type="button" id="citas" value="Citas">
+</div>
+</body>
+</html>
